@@ -32,7 +32,7 @@ public class SearchElement {
 		System.out.println("Enter elements in the Array: ");
 		
 		//loop to insert elements in the array
-		for(int i=0;i<5;i++) {
+		for(int i=0;i<size;i++) {
 			
 			array[i]=sc.nextInt();
 		}
