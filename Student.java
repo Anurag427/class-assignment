@@ -1,39 +1,48 @@
-package OOPs;
-class StudentDetails{
-	//delearing instance variables 
-	int studentId;
-	String studentName;
-	String studentAddress;
-	long phNo;
-	
-	public void setData( int id,String name,String address,long ph)//Initializing variables with help of method
-	{
-		studentId=id;
-		studentName=name;
-		studentAddress= address;
-		phNo=ph;
-		
-		
-	}
-	//printing data's
-	public void getData() { 
-		System.out.println("studentid:" +studentId+" "+"studentname: "+studentName+" "+
-	"student address: "+studentAddress+" "+"student phone no."+" "+phNo);
-	}
-}
-public class Student {
-	public static void main(String[] args) {
-		
-		StudentDetails anu=new StudentDetails(); //creating object for StudentDetails class
-		anu.setData(12, "anurag", "sealdah", 9062287); //calling setData method
-		anu.getData(); //calling getData method
-		Book  b =new Book();
-		b.setBookid(1);
-		b.setBookName("anurag ");
-		b.getBookName();
-		System.out.println("book id: "+b.getBookid()+" "+"Booking name: "+b.bookName);
-	}
-	
-	
+package studentsystem;
 
+public class Student {
+	//declaring variables
+	private int studentId;
+	private String studentName,address ;
+	
+	//taking getters and setters
+	public int getStudentId() {
+		return studentId;
+	}
+	public void setStudentId(int studentId) {
+		this.studentId = studentId;
+	}
+	
+	public String getStudentName() {
+		return studentName;
+	}
+	public void setStudentName(String studentName) {
+		this.studentName = studentName;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	//initializing using constructor
+	public Student(int studentId, String studentName, String address) {
+		super();
+		this.studentId = studentId;
+		this.studentName = studentName;
+		this.address = address;
+	}
+	public Student() {
+		super();
+		
+	}
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Student [studentId=").append(studentId)
+				.append(", studentName=").append(studentName).append(", address=").append(address).append("]");
+		return builder.toString();
+	}
+	
+	
 }
