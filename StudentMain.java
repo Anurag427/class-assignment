@@ -62,7 +62,7 @@ public class StudentMain {
 			break;
 		case 6: break;
 		}
-		}while(choice!=4);
+		}while(choice!=6);
 	}
 
 }
